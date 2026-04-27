@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'LeagueGothic';
+    src: url('../fonts/League_Gothic-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'AcknowledgementMedium';
+    src: url('../fonts/Acknowledgement-webfont.ttf');
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #eee;
+    font-family: Times, serif;
+}
+
+::selection {
+    background: #484848;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* FORMULARIO */
+form {
+    width: 740px;
+    margin: 10px auto; 
+    padding: 20px;
+    background: #ccc url('../imgs/bg-form.png') no-repeat bottom center;
+    border: solid 2px #888;
+    border-width: 2px 0;
+    text-align: center;
+}
+
+form h1 {
+    font-family: 'AcknowledgementMedium';
+    font-size: 2.2em; 
+    padding: 10px 0;
+    margin-top: 0;
+    letter-spacing: 2px;
+    background-image: url('../imgs/bg-formtitle-left.png'), url('../imgs/bg-formtitle-right.png');
+    background-position: -2% center, 102% center; 
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100px auto;
+}
+
+ul { list-style: none; 
+    padding: 10px; 
+    text-align: center;
+}
+
+li { margin-bottom: 20px; 
+}
+
+label {
+    font-family: 'LeagueGothic';
+    font-size: 1.2em; 
+    margin-bottom: 2px;
+    display: block;  
+}
+
+input:not([type=range]):not([type=checkbox]) {
+    border: none;
+    border-bottom: 2px dotted #444;
+    background-color: transparent;
+    display: block;
+    margin: 10px auto;
+    padding: 5px 35px 5px 10px;
+    width: 65%;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px auto;
+}
+
+input:required {
+    background-image: url('../imgs/required.png');
+}
+
+input:focus:valid {
+    background-image: url('../imgs/valid.png') !important;
+}
+
+input:focus:invalid {
+    background-image: url('../imgs/invalid.png') !important;
+}
+
+input[type="url"], 
+input[type="date"] {
+    display: block;
+    margin: 10px auto !important;
+}
+
+#url::placeholder {
+    color: #777;
+    font-style: italic;
+}
+
+#fechaInicio {
+    color: #777;
+    font-style: italic;
+    font-family: serif;
+}
+
+#url,
+#fechaInicio {
+    width: 70%;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 8px 10px;
+}
+
+button {
+    font-family: 'LeagueGothic', Tahoma, Geneva, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-style: italic;
+    padding: 10px 150px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background: radial-gradient(circle at 30% 120%, rgba(144,144,144, 1) 0%, rgba(72,72,72,1) 50%);
+    opacity: 0.8;
+    transition: opacity .25s linear;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#conocimientos {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 55%;
+    height: 4px; 
+    background: #707070; 
+    outline: none;
+    border-radius: 5px;
+    margin: 30px auto;
+}
+
+#conocimientos::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: whitesmoke;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+#conocimientos+.linea-puntos {
+    width: 65%;
+    margin: 0 auto 20px auto;
+    border-bottom: 2px dotted #444;
+}
+
+#url::placeholder {
+    font-size: 1.1em; 
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    font-family: serif;
+}
+
+#fechaInicio {
+    font-size: 1.1em; 
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    font-family: serif;
+}
+
+#url:focus::placeholder {
+    font-size: 1em;
+}
+
+.inline-item input[type="number"] {
+    width: 5em;
+    display: inline-block;
+    margin: 0;
+    padding: 2px 4px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dotted #444;
+}
